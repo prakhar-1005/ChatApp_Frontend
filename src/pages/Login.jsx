@@ -39,7 +39,7 @@ const Login = () => {
     setError(false)
 
     try {
-      const response = await axios.post('https://chat-app-smoky-ten.vercel.app/api/user/login',{
+      const response = await axios.post('https://chit-chat-backend-zge8.onrender.com/api/user/login',{
         username,
         password
       })

@@ -116,7 +116,7 @@ const Register = () => {
       }
 
       try { 
-        const response = await axios.post('https://chat-app-smoky-ten.vercel.app/api/user/register',{
+        const response = await axios.post('https://chit-chat-backend-zge8.onrender.com/api/user/register',{
           username,
           email,
           password,

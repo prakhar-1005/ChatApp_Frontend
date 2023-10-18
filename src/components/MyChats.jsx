@@ -25,7 +25,7 @@ const MyChats = () => {
               }
             }
         
-            const {data} = await axios.get('https://chat-app-smoky-ten.vercel.app/api/chat/' , config)
+            const {data} = await axios.get('https://chit-chat-backend-zge8.onrender.com/api/chat/' , config)
             setChatsList(data)
         } catch (error) {
           toast({

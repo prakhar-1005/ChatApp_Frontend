@@ -11,7 +11,7 @@ import { io } from "socket.io-client";
 import Lottie from 'react-lottie'
 import animationData from "../typing/typing.json";
 
-const ENDPOINT = "https://chat-app-smoky-ten.vercel.app"
+const ENDPOINT = "https://chit-chat-backend-zge8.onrender.com"
 var socket, selectedChatCompare
 
 const SingleChat = () => {
@@ -51,7 +51,7 @@ const SingleChat = () => {
 
             setLoading(true);
 
-            const { data } = await axios.get(`https://chat-app-smoky-ten.vercel.app/api/message/${selectedChat._id}`, config );
+            const { data } = await axios.get(`https://chit-chat-backend-zge8.onrender.com/api/message/${selectedChat._id}`, config );
             setMessages(data);
             setLoading(false);
             socket.emit("join chat", selectedChat);
@@ -84,7 +84,7 @@ const SingleChat = () => {
               },
             };
             setNewMessage("");
-            const { data } = await axios.post("https://chat-app-smoky-ten.vercel.app/api/message",
+            const { data } = await axios.post("https://chit-chat-backend-zge8.onrender.com/api/message",
               {
                 content: newMessage,
                 chatId: selectedChat,

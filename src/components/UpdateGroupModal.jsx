@@ -35,7 +35,7 @@ const UpdateGroupModal = ({fetchMessages}) => {
                 },
             }
 
-            const {data} = await axios.get(`https://chat-app-smoky-ten.vercel.app/api/user?search=${search}`,config)
+            const {data} = await axios.get(`https://chit-chat-backend-zge8.onrender.com/api/user?search=${search}`,config)
             setLoading(false)
             setSearchResult(data)
         } catch (error) {
@@ -65,7 +65,7 @@ const UpdateGroupModal = ({fetchMessages}) => {
                 },
             }
 
-            const {data} =await axios.put('https://chat-app-smoky-ten.vercel.app/api/chat/rename',{
+            const {data} =await axios.put('https://chit-chat-backend-zge8.onrender.com/api/chat/rename',{
                 groupId: selectedChat._id,
                 name: groupName
             },config)
@@ -120,7 +120,7 @@ const UpdateGroupModal = ({fetchMessages}) => {
           },
         };
 
-        const { data } = await axios.put('https://chat-app-smoky-ten.vercel.app/api/chat/groupadd',
+        const { data } = await axios.put('https://chit-chat-backend-zge8.onrender.com/api/chat/groupadd',
           {
             userId: user1._id,
             groupId: selectedChat._id,
@@ -167,7 +167,7 @@ const UpdateGroupModal = ({fetchMessages}) => {
             Authorization: `Bearer ${user.token}`,
           },
         };
-        const { data } = await axios.put(`https://chat-app-smoky-ten.vercel.app/api/chat/groupremove`,
+        const { data } = await axios.put(`https://chit-chat-backend-zge8.onrender.com/api/chat/groupremove`,
           {
             userId: user1._id,
             groupId: selectedChat._id,

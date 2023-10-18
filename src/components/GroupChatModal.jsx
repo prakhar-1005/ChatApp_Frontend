@@ -34,7 +34,7 @@ const GroupChatModal = ({children}) => {
                 },
             }
 
-            const response = await axios.get(`https://chat-app-smoky-ten.vercel.app/api/user?search=${search}`,config)
+            const response = await axios.get(`https://chit-chat-backend-zge8.onrender.com/api/user?search=${search}`,config)
             // console.log(response);
             // console.log(Array.isArray(data));  -> true
             setLoading(false)
@@ -107,7 +107,7 @@ const GroupChatModal = ({children}) => {
                 },
             }
     
-            const {data} = await axios.post('https://chat-app-smoky-ten.vercel.app/api/chat/group',{
+            const {data} = await axios.post('https://chit-chat-backend-zge8.onrender.com/api/chat/group',{
                 name:groupName,
                 users: JSON.stringify(groupUsers.map((u) => u._id))  
               /*  1) groupUsers is an array of objects, each representing a user.

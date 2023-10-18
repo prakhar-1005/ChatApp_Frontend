@@ -43,7 +43,7 @@ const SideBar = () => {
                 },
             };
         
-            const { data } = await axios.get(`https://chat-app-smoky-ten.vercel.app/api/user?search=${search}`, config);
+            const { data } = await axios.get(`https://chit-chat-backend-zge8.onrender.com/api/user?search=${search}`, config);
 
             setLoading(false);
             setSearchResult(data);
@@ -71,7 +71,7 @@ const SideBar = () => {
                 }
             }
 
-            const {data} = await axios.post('https://chat-app-smoky-ten.vercel.app/api/chat/',{userId},config)   // axios syntax -> url, body, header
+            const {data} = await axios.post('https://chit-chat-backend-zge8.onrender.com/api/chat/',{userId},config)   // axios syntax -> url, body, header
             // console.log("this is data",data);
             
             if (!chatsList.find((c) => c._id===data._id)) { //if it finds that the chat is not present, it is going to append chatsList
